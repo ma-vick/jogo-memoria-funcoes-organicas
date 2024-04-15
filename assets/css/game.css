@@ -1,0 +1,85 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 20px 50px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60%;
+  width: 100%;
+  background-color: rgba(65, 176, 109, 0.8);
+  color: #053017;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 60%;
+  margin: 70px auto;
+}
+
+.card {
+  cursor: pointer;
+  aspect-ratio: 3/4;
+  width: 100%;
+  background-color: #333;
+  background-color: #141e46;
+  position: relative;
+  border-radius: 8px;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #41b06e;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-image: url("../imgs/carta.jpg");
+  backface-visibility: hidden;
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+
+.disabled-card {
+  cursor: not-allowed;
+  filter: saturate(0);
+  opacity: 0.5;
+}
+
+.play-again {
+  cursor: pointer;
+  background-color: #8decb4;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  transition: 0.3s ease;
+}
