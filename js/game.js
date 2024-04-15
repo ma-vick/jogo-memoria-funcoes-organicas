@@ -111,7 +111,7 @@ let firstCard = "";
 let secondCard = "";
 
 const playAgain = () => {
-  window.location = "../index.html";
+  window.location = "/pages/index.html";
 };
 
 const createBtnPlayAgain = () => {
